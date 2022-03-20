@@ -1,0 +1,50 @@
+const data ={
+    products: [
+        {
+            _id:'1',
+            name: 'drivers license',
+            category: 'trinken',
+            image: './images/drivers_license3.png',
+            price: 50,
+            brand: 'Katerkiste',
+            rating: 2,
+            rumReviews: 10,
+            description: 'gutes Produkt',
+        },
+        {
+            _id:'2',
+            name: 'drivers license',
+            category: 'trinken',
+            image: './images/drivers_license3.png',
+            price: 50,
+            brand: 'Katerkiste',
+            rating: 3,
+            rumReviews: 10,
+            description: 'gutes Produkt',
+        },
+        {
+            _id:'3',
+            name: 'drivers license',
+            category: 'trinken',
+            image: './images/drivers_license3.png',
+            price: 50,
+            brand: 'Katerkiste',
+            rating: 4,
+            rumReviews: 10,
+            description: 'gutes Produkt',
+        },
+        {
+            _id:'4',
+            name: 'drivers license',
+            category: 'trinken',
+            image: './images/drivers_license3.png',
+            price: 50,
+            brand: 'Katerkiste',
+            rating: 5,
+            rumReviews: 10,
+            description: 'gutes Produkt',
+        },
+    ],
+};
+
+export default data;
