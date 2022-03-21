@@ -107,3 +107,7 @@ margin-bottom: 0.5rem;
   color: gold;
   margin: 0.1rem;
 }
+
+.rating span:last-child{
+  color: #404040
+}
