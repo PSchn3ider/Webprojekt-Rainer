@@ -5,7 +5,7 @@ import useRouter from "./routers/userRouter.js";
 
 
 const app = express();
-mongoose.connect('mongodb+srv://Dennis:Dennis1097@cluster0.8hfbv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://Dennis:Dennis1097@cluster0.8hfbv.mongodb.net/test');
 
 
 app.get('/api/products/:id',(req,res) =>{
