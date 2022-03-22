@@ -2,10 +2,17 @@ import express from "express";
 import data from "./data.js";
 import mongoose from "mongoose";
 import useRouter from "./routers/userRouter.js";
+import dotenv from 'dotenv';
 
-
+dotenv.config();
 const app = express();
-mongoose.connect('mongodb+srv://Dennis:Dennis1097@cluster0.8hfbv.mongodb.net/test');
+try {
+  mongoose.connect(process.env.MONGOURL, () =>
+  console.log('Connected to DB')
+);
+} catch (error) {
+  console.log(error);
+};
 
 
 app.get('/api/products/:id',(req,res) =>{

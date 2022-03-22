@@ -14,6 +14,19 @@ const data = {
       password: bcrypt.hashSync('1234', 8),
       isAdmin: false,
     },
+
+    {
+      name: 'Hasan',
+      email: 'HajiH.wwi20@student.dhbw-heidenheim.de',
+      password: bcrypt.hashSync('1234', 8),
+      isAdmin: false,
+    },
+    {
+      name: 'Test',
+      email: 'TEst.wwi20@student.dhbw-heidenheim.de',
+      password: bcrypt.hashSync('1234', 8),
+      isAdmin: false,
+    },
   ],
 
     products: [
