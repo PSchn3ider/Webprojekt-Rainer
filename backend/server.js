@@ -7,6 +7,9 @@ import productRouter from "./routers/productRouter.js";
 
 dotenv.config();
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 try {
   mongoose.connect(process.env.MONGOURL, () =>
   console.log('Connected to DB')
