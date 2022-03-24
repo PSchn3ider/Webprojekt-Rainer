@@ -6,7 +6,6 @@ import { isAuth } from '../utils.js';
 const orderRouter = express.Router();
 
 orderRouter.post(
-    //api/routers
   '/',
   isAuth,
   expressAsyncHandler(async (req, res) => {
