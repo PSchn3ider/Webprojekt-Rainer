@@ -15,7 +15,8 @@ export default function ShippingAddressScreen(props) {
     navigate('/signin');
   }
 
-  const [fullName, setFullName] = useState(shippingAddress.fullName);
+  const [firstName, setfirstName] = useState(shippingAddress.firstName);
+  const [lastName, setlastName] = useState(shippingAddress.lastName);
   const [address, setAddress] = useState(shippingAddress.address);
   const [city, setCity] = useState(shippingAddress.city);
   const [postalCode, setPostalCode] = useState(shippingAddress.postalCode);
@@ -25,7 +26,7 @@ export default function ShippingAddressScreen(props) {
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(
-      saveShippingAddress({ fullName, address, city, postalCode, country })
+      saveShippingAddress({ firstName,lastName, address, city, postalCode, country })
     );
     navigate('/payment');
   };
@@ -37,13 +38,24 @@ export default function ShippingAddressScreen(props) {
           <h1>Shipping Address</h1>
         </div>
         <div>
-          <label htmlFor="fullName">Full Name</label>
+          <label htmlFor="firstName">Frist Name</label>
           <input
             type="text"
-            id="fullName"
-            placeholder="Enter full name"
-            value={fullName}
-            onChange={(e) => setFullName(e.target.value)}
+            id="firstName"
+            placeholder="Enter first name"
+            value={firstName}
+            onChange={(e) => setfirstName(e.target.value)}
+            required
+          ></input>
+        </div>
+        <div>
+          <label htmlFor="lastName">Last Name</label>
+          <input
+            type="text"
+            id="lastName"
+            placeholder="Enter las name"
+            value={lastName}
+            onChange={(e) => setlastName(e.target.value)}
             required
           ></input>
         </div>

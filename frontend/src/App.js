@@ -8,6 +8,7 @@ import { signout } from './actions/userActions';
 import { useDispatch, useSelector } from 'react-redux';
 import RegisterScreen from './screens/RegisterScreen';
 import PaymentMethodScreen from './screens/PaymentMethodScreen';
+import PlaceOrderScreen from './screens/PlaceOrderScreen';
 
 
 function App() {
@@ -63,6 +64,7 @@ function App() {
           <Route path="/register" element={<RegisterScreen/>}></Route>
           <Route path="/shipping" element={<ShippingAdressScreen/>}></Route>
           <Route path="/payment" element={<PaymentMethodScreen/>}></Route>
+          <Route path="/placeorder" element={<PlaceOrderScreen/>}></Route>
           <Route path="/" element={<HomeScreen/>} exact></Route>
           </Routes>
         </main>
