@@ -13,6 +13,7 @@ import OrderScreen from './screens/OrderScreen';
 import OrderHistoryScreen from './screens/OrderHistoryScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import PrivateRoute from './components/PrivateRoute';
+import ProductListScreen from './screens/ProductListScreen';
 
 
 
@@ -64,7 +65,21 @@ function App() {
             ) : (
               <Link to="/signin">Sign In</Link>
             )}
-            
+            {userInfo && userInfo.isAdmin && (
+              <div className="dropdown">
+                <Link to="#admin">
+                  Admin <i className="fa fa-caret-down"></i>
+                </Link>
+                <ul className="dropdown-content">
+                <li>
+                    <Link to="/productlist">Alle Produkte</Link>
+                  </li>
+                  <li>
+                    <Link to="/productanlegen">Produkte Anlegen</Link>
+                  </li>
+                </ul>
+              </div>
+            )}
           </div>
           </header>
         <main>
@@ -85,6 +100,12 @@ function App() {
                   <ProfileScreen/>
                 </PrivateRoute>
               }></Route>
+          <Route path="/productlist" element={
+                <PrivateRoute>
+                  <ProductListScreen/>
+                </PrivateRoute>
+              }></Route>
+
           </Routes>
         </main>
         <footer className="row center">All right reserved</footer>
